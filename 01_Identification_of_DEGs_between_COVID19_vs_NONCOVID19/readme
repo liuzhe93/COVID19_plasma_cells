@@ -1,0 +1,6 @@
+This is the first step:
+1. merge two discovery datasets: GSE157103 and GSE152641
+2. identification of DEGs removing batch effects
+3. functional annotation of DEGs
+4. draw volcano and heatmap figures
+
