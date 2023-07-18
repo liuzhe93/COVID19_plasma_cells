@@ -1,0 +1,5 @@
+This is the sencond step:
+1. tranform read counts to FPKM values matrix
+2. estimate the extent of immune cell enumeration in COVID-19
+3. classify 64 cell types into five categories: Lymphoids, Stem cells, Myeloids, Stromal cells, and Others
+4. draw the enrichment fraction of each catogory in COVID-19 and NON-COVID-19 group
