@@ -1,0 +1,5 @@
+This is the third step:
+1. expression profile data processing
+2. separate samples into low- and high-plasma cells enriched groups
+3. functional annotation of DEGs
+4. draw volcano and heatmap figures
