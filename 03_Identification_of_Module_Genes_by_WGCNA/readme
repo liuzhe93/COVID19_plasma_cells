@@ -1,5 +1,8 @@
 This is the third step:
 1. expression profile data processing
 2. separate samples into low- and high-plasma cells enriched groups
-3. functional annotation of DEGs
-4. draw volcano and heatmap figures
+3. filtering data at the gene and sample levels
+4. identify the suitable beta-value
+5. cluster genes into modules and visualization
+6. analysis of the relationship between traits and module
+7. export genes in the interested module
