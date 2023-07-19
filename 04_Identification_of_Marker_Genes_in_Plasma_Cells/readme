@@ -1,0 +1,5 @@
+This is the fourth step:
+1. construct RNA Seurat object
+2. estimate the percentage of each cell sub-population in scRNA-seq data
+2. find all markers of cluster "Plasma cells"
+
