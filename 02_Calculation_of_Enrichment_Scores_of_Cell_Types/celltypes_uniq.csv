@@ -1,0 +1,68 @@
+x,CellType
+aDC,Myeloids
+Adipocytes,Stromal Cells
+Astrocytes,Others
+B-cells,Lymphoids
+Basophils,Myeloids
+CD4+ memory T-cells,Lymphoids
+CD4+ naive T-cells,Lymphoids
+CD4+ T-cells,Lymphoids
+CD4+ Tcm,Lymphoids
+CD4+ Tem,Lymphoids
+CD8+ naive T-cells,Lymphoids
+CD8+ T-cells,Lymphoids
+CD8+ Tcm,Lymphoids
+CD8+ Tem,Lymphoids
+cDC,Myeloids
+Chondrocytes,Stromal Cells
+Class-switched memory B-cells,Lymphoids
+CLP,Stem Cells
+CMP,Stem Cells
+DC,Myeloids
+Endothelial cells,Stromal Cells
+Eosinophils,Myeloids
+Epithelial cells,Others
+Erythrocytes,Stem Cells
+Fibroblasts,Stromal Cells
+GMP,Stem Cells
+Hepatocytes,Others
+HSC,Stem Cells
+iDC,Myeloids
+Keratinocytes,Others
+ly Endothelial cells,Stromal Cells
+Macrophages,Myeloids
+Macrophages M1,Myeloids
+Macrophages M2,Myeloids
+Mast cells,Myeloids
+Megakaryocytes,Stem Cells
+Melanocytes,Others
+Memory B-cells,Lymphoids
+MEP,Stem Cells
+Mesangial cells,Others
+Monocytes,Myeloids
+MPP,Stem Cells
+MSC,Stromal Cells
+mv Endothelial cells,Stromal Cells
+Myocytes,Stromal Cells
+naive B-cells,Lymphoids
+Neurons,Others
+Neutrophils,Myeloids
+NK cells,Lymphoids
+NKT,Lymphoids
+Osteoblast,Stromal Cells
+pDC,Myeloids
+Pericytes,Stromal Cells
+Plasma cells,Lymphoids
+Platelets,Stem Cells
+Preadipocytes,Stromal Cells
+pro B-cells,Lymphoids
+Sebocytes,Others
+Skeletal muscle,Stromal Cells
+Smooth muscle,Stromal Cells
+Tgd cells,Lymphoids
+Th1 cells,Lymphoids
+Th2 cells,Lymphoids
+Tregs,Lymphoids
+ImmuneScore,
+StromaScore,
+MicroenvironmentScore,
