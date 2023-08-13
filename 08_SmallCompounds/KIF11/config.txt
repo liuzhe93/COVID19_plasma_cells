@@ -1,0 +1,9 @@
+receptor = 3k5e_pymol.pdbqt
+ligand = Structure2D_COMPOUND_CID_2726.pdbqt
+center_x = 20.334
+center_y = 18.779
+center_z = 19.91
+size_x = 15.0
+size_y = 15.0
+size_z = 15.0
+out = Structure2D_COMPOUND_CID_2726_out.pdbqt
