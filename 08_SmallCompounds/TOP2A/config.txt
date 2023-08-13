@@ -1,0 +1,9 @@
+receptor = 4fm9_pymol.pdbqt
+ligand = Structure2D_COMPOUND_CID_42890.pdbqt
+center_x = 33.554
+center_y = 41.456
+center_z = 15.917
+size_x = 15.0
+size_y = 15.0
+size_z = 15.0
+out = Structure2D_COMPOUND_CID_42890_out.pdbqt
