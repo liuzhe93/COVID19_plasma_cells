@@ -156,7 +156,17 @@ par(mfrow = c(1,1))
 pdf("SampleTree.pdf",width = 20,height = 5)
 plot(sampleTree, main = "Sample clustering to detect outliers", sub="", xlab="")
 dev.off()
-
+abline(h=150000,col="red")
+clust = cutreeStatic(sampleTree, cutHeight = 150000, minSize = 10)
+table(clust)
+#clust
+#0   1 
+#3 209
+keepSamples = (clust==1)
+datExpr = dataExpr[keepSamples,]
+nGenes = ncol(datExpr)
+nSamples = nrow(datExpr)
+dataExpr<-datExpr
 
 #################################step2_找到合适的beta值#####################################################################
 powers = c(c(1:10), seq(from = 12, to=20, by=2))
