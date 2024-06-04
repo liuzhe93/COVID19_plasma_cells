@@ -39,6 +39,59 @@ write.csv(counts_merged, "discoverydataset_GSE157103_GSE152641.csv", quote = F)
 dim(counts_merged)
 #[1] 19184   212
 
+
+#https://cloud.tencent.com/developer/article/1431124
+library("FactoMineR")
+library("factoextra")
+df<-t(counts_merged)
+df<-as.data.frame(df)
+df$label<-row.names(df)
+
+condition <- c(rep("COVID",62),rep("NONCOVID",24),rep("COVID",100),rep("NONCOVID",26))
+batch <- c(rep(1,86),rep(2,126))
+sampleTable <- data.frame(condition=condition,batch=batch)
+#样本表达数据框列名需要与sampleTable一致。
+row.names(sampleTable) <- colnames(counts_merged) 
+sampleTable$label<-rownames(sampleTable)
+merged_before<-merge(df, sampleTable, by =  "label")
+rownames(merged_before)<-merged_before$label
+merged_before$label<-NULL
+merged_before$group<-merged_before$condition
+merged_before$condition<-NULL
+merged_before$batch<-NULL
+merged_before.pca<-PCA(merged_before[,-ncol(merged_before)],graph=FALSE)
+merged_before.pca
+fviz_pca_ind(merged_before.pca,
+             geom.ind="point",
+             col.ind=merged_before$group,
+             addEllipses=TRUE,
+             legend.title="Groups")
+ggsave("all_samplee_PCA_before.png")
+merged_after$group<-merged_after$condition
+merged_after$condition<-NULL
+merged_after$batch<-NULL
+merged_after.pca<-PCA(merged_after[,-ncol(merged_after)],graph=FALSE)
+merged_after.pca
+fviz_pca_ind(merged_after.pca,
+             geom.ind="point",
+             col.ind=merged_after$group,
+             addEllipses=TRUE,
+             legend.title="Groups")
+ggsave("all_samplee_PCA_after.png")
+
+
+
+df1<-t(normal_gset)
+df1<-as.data.frame(df1)
+df1$label<-row.names(df1)
+merged_after<-merge(df1, sampleTable, by =  "label")
+rownames(merged_after)<-merged_after$label
+merged_after$label<-NULL
+
+
+
+
+
 condition <- c(rep("COVID",62),rep("NONCOVID",24),rep("COVID",100),rep("NONCOVID",26))
 batch <- c(rep(1,86),rep(2,126))
 sampleTable <- data.frame(condition=condition,batch=batch)
