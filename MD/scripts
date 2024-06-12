@@ -1,3 +1,4 @@
+#4fm9 is from RCSB
 grep -v HOH 4fm9.pdb > 4fm9_rmWater.pdb 
 grep -v GOL 4fm9_rmWater.pdb > 4fm9_rmLigand.pdb
 grep -v MG 4fm9_rmLigand.pdb > 4fm9_clean.pdb
@@ -6,6 +7,13 @@ grep -v MG 4fm9_rmLigand.pdb > 4fm9_clean.pdb
 gmx pdb2gmx -f 4fm9_protein.pdb -o 4fm9_processed.gro
 #input 1 
 #input 1
-#add H by Avogadro2
-
-
+#BRD-K89997465 is from PubChem
+#add H by Avogadro2 and saved as BRD.mol2
+sed -i 's/UNL1/BRD/g' BRD.mol2
+perl sort_mol2_bonds.pl BRD.mol2 BRDfix.mol2
+#obtain topology file (BRDfix.str) of ligand(BRD) from https://cgenff.umaryland.edu/
+python cgenff_charmm2gmx_py3_nx2.py BRD BRDfix.mol2 BRDfix.str charmm36_ljpme-jul2021.ff/
+gmx editconf -f brd_ini.pdb -o brd.gro
+cp 4fm9_processed.gro complex.gro
+gmx editconf -f complex.gro -o newbox.gro -bt dodecahedron -d 1.0
+gmx solvate -cp newbox.gro -cs spc216.gro -p topol.top -o solv.gro
