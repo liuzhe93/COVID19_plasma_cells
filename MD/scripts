@@ -1,11 +1,11 @@
 grep -v HOH 4fm9.pdb > 4fm9_rmWater.pdb 
 grep -v GOL 4fm9_rmWater.pdb > 4fm9_rmLigand.pdb
 grep -v MG 4fm9_rmLigand.pdb > 4fm9_clean.pdb
-#remove other ligands by Pymol
+#remove other ligands by PyMOL
 #4fm9_protein.pdb
 gmx pdb2gmx -f 4fm9_protein.pdb -o 4fm9_processed.gro
 #input 1 
 #input 1
-
+#add H by Avogadro2
 
 
