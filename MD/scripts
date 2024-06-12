@@ -17,3 +17,8 @@ gmx editconf -f brd_ini.pdb -o brd.gro
 cp 4fm9_processed.gro complex.gro
 gmx editconf -f complex.gro -o newbox.gro -bt dodecahedron -d 1.0
 gmx solvate -cp newbox.gro -cs spc216.gro -p topol.top -o solv.gro
+gmx grompp -f ions.mdp -c solv.gro -p topol.top -o ions.tpr
+
+
+
+
