@@ -1,1 +1,3 @@
-
+grep -v HOH 4fm9.pdb > 4fm9_rmWater.pdb 
+grep -v GOL 4fm9_rmWater.pdb > 4fm9_rmLigand.pdb
+grep -v MG 4fm9_rmLigand.pdb > 4fm9_protein.pdb
