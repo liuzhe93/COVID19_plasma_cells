@@ -31,7 +31,9 @@ gmx genrestr -f brd.gro -n index_brd.ndx -o posre_brd.itp -fc 1000 1000 1000
 #3
 gmx make_ndx -f em.gro -o index.ndx
 #1|13
+#14|15
 gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -n index.ndx -o nvt.tpr
+gmx mdrun -deffnm nvt
 
 
 
