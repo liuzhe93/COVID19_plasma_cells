@@ -22,6 +22,20 @@ gmx genion -s ions.tpr -o solv_ions.gro -p topol.top -pname SOD -nname CLA -neut
 #15
 gmx grompp -f em.mdp -c solv_ions.gro -p topol.top -o em.tpr -maxwarn  7
 gmx mdrun -v -deffnm em
+gmx energy -f em.edr -o potential.xvg
+#11
+#0
+gmx make_ndx -f brd.gro -o index_brd.ndx
+#0 & ! a H*
+gmx genrestr -f brd.gro -n index_brd.ndx -o posre_brd.itp -fc 1000 1000 1000
+#3
+gmx make_ndx -f em.gro -o index.ndx
+#1|13
+gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -n index.ndx -o nvt.tpr
+
+
+
+
 
 
 
