@@ -1,0 +1,90 @@
+                :-) GROMACS - gmx grompp, 2023.4-conda_forge (-:
+
+Executable:   /mnt/zhangzheng_group/liuz-54/miniconda3/envs/py37/bin.AVX2_256/gmx
+Data prefix:  /mnt/zhangzheng_group/liuz-54/miniconda3/envs/py37
+Working dir:  /mnt/zhangzheng_group/liuz-54/others/MD/3HTB/KIF11
+Command line:
+  gmx grompp -f npt.mdp -c nvt.gro -t nvt.cpt -r nvt.gro -p topol.top -n index.ndx -o npt.tpr -maxwarn 100
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'ns_type'
+
+WARNING 1 [file npt.mdp]:
+  The Berendsen barostat does not generate any strictly correct ensemble,
+  and should not be used for new production simulations (in our opinion).
+  We recommend using the C-rescale barostat instead.
+
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group Protein_BRD is 29803.77
+Number of degrees of freedom in T-Coupling group CLA_Water is 350688.25
+
+NOTE 1 [file npt.mdp]:
+  There are 1 non-linear virtual site constructions. Their contribution to
+  the energy error is approximated. In most cases this does not affect the
+  error significantly.
+
+
+NOTE 2 [file npt.mdp]:
+  Removing center of mass motion in the presence of position restraints
+  might cause artifacts. When you are using position restraints to
+  equilibrate a macro-molecule, the artifacts are usually negligible.
+
+Last frame         -1 time  100.000   
+
+There were 2 NOTEs
+
+There was 1 WARNING
+
+GROMACS reminds you: "The historical meaning of QM/MM: Quanto Mangi, Mamma Mia!" (Attilio Vittorio Vargiu, at BioExcel 2022 Summer School in Sardinia)
+
+Setting the LD random seed to -1103105042
+
+Generated 167799 of the 167910 non-bonded parameter combinations
+
+Generated 117519 of the 167910 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'BRD'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'CLA'
+
+turning H bonds into constraints...
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+
+The center of mass of the position restraint coord's is 10.422 10.416  4.918
+
+The center of mass of the position restraint coord's is 10.422 10.416  4.918
+
+The largest distance between excluded atoms is 0.563 nm between atom 11900 and 11933
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.294 nm, buffer size 0.094 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.222 nm, buffer size 0.022 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+
+Reading Coordinates, Velocities and Box size from old trajectory
+
+Will read whole trajectory
+
+Using frame at t = 100 ps
+
+Starting time for run is 0 ps
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 96x96x96, spacing 0.145 0.145 0.145
+
+Estimate for the relative computational load of the PME mesh part: 0.16
+
+This run will generate roughly 105 Mb of data
