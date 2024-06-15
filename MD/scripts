@@ -37,6 +37,7 @@ gmx mdrun -deffnm nvt
 gmx grompp -f npt.mdp -c nvt.gro -t nvt.cpt -r nvt.gro -p topol.top -n index.ndx -o  npt.tpr -maxwarn 100
 gmx mdrun -deffnm npt
 gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -n index.ndx -o md_0_100.tpr
+gmx mdrun -deffnm  md_0_100
 
 
 
