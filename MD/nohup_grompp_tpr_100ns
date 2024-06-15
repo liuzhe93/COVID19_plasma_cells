@@ -1,0 +1,74 @@
+                :-) GROMACS - gmx grompp, 2023.4-conda_forge (-:
+
+Executable:   /mnt/zhangzheng_group/liuz-54/miniconda3/envs/py37/bin.AVX2_256/gmx
+Data prefix:  /mnt/zhangzheng_group/liuz-54/miniconda3/envs/py37
+Working dir:  /mnt/zhangzheng_group/liuz-54/others/MD/3HTB/KIF11
+Command line:
+  gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -n index.ndx -o md_0_100.tpr
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'ns_type'
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group Protein_BRD is 29803.77
+Number of degrees of freedom in T-Coupling group CLA_Water is 350688.25
+
+NOTE 1 [file md.mdp]:
+  There are 1 non-linear virtual site constructions. Their contribution to
+  the energy error is approximated. In most cases this does not affect the
+  error significantly.
+
+Last frame         -1 time  100.000   
+
+NOTE 2 [file md.mdp]:
+  This run will generate roughly 8985 Mb of data
+
+
+There were 2 NOTEs
+
+GROMACS reminds you: "Sir, spare your threats: The bug which you would fright me with I seek." (Hermione, Act III, scene II of Shakespeare's Winter's Tale)
+
+Setting the LD random seed to -269902861
+
+Generated 167799 of the 167910 non-bonded parameter combinations
+
+Generated 117519 of the 167910 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'BRD'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'CLA'
+
+turning H bonds into constraints...
+
+Cleaning up constraints and constant bonded interactions with virtual sites
+
+The largest distance between excluded atoms is 0.554 nm between atom 11906 and 11933
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.295 nm, buffer size 0.095 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.223 nm, buffer size 0.023 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+
+Reading Coordinates, Velocities and Box size from old trajectory
+
+Will read whole trajectory
+
+Using frame at t = 100 ps
+
+Starting time for run is 0 ps
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 96x96x96, spacing 0.143 0.143 0.143
+
+Estimate for the relative computational load of the PME mesh part: 0.16
